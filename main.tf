@@ -70,6 +70,7 @@ resource "aws_instance" "my_instance" {
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet.id
   security_groups = [aws_security_group.my_security_group.id]
+  user_data       = file("httpd.sh")
   count           = 1
   tags ={
   Name = "my_terraform_htppd"
