@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create VPC
 resource "aws_vpc" "my_vpc" {
-  cidr_block = "10.100.0.0/16"
+  cidr_block = "192.168.0.0/16"
 }
 
 # Create internet gateway
@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "my_igw" {
 # Create public subnet
 resource "aws_subnet" "public_subnet" {
   vpc_id            = aws_vpc.my_vpc.id
-  cidr_block        = "10.100.1.0/24"
+  cidr_block        = "192.168.0.0/24"
   availability_zone = "ap-south-1a" # Specify availability zone
   map_public_ip_on_launch = true
 }
