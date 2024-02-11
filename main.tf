@@ -76,5 +76,5 @@ resource "aws_instance" "my_instance" {
   Name = "my_terraform_htppd"
   }
   # Add key name if using SSH key pair
-  key_name = "mumbai"
+  key_name = "mumbai01t3"
 }
