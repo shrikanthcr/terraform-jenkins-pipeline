@@ -66,7 +66,7 @@ resource "aws_security_group" "my_security_group" {
 
 # Launch EC2 instance
 resource "aws_instance" "my_instance" {
-  ami             = "ami-0e731c8a588258d0d"
+  ami             = "ami-06b72b3b2a773be2b"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet.id
   security_groups = [aws_security_group.my_security_group.id]
@@ -75,5 +75,5 @@ resource "aws_instance" "my_instance" {
   Name = "my_terraform_htppd"
   }
   # Add key name if using SSH key pair
-  key_name = "nvkey"
+  key_name = "mumbai"
 }
