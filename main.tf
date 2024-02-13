@@ -1,6 +1,6 @@
 # Define provider
 provider "aws" {
-  region = "ap-south-1"
+  region = "ap-southeast-2"
 }
 
 # Create VPC
@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "my_igw" {
 resource "aws_subnet" "public_subnet" {
   vpc_id            = aws_vpc.my_vpc.id
   cidr_block        = "192.168.0.0/24"
-  availability_zone = "ap-south-1a" # Specify availability zone
+  availability_zone = "ap-southeast-2a" # Specify availability zone
   map_public_ip_on_launch = true
 }
 
@@ -76,5 +76,5 @@ resource "aws_instance" "my_instance" {
   Name = "my_terraform_htppd"
   }
   # Add key name if using SSH key pair
-  key_name = "mumbai01t3"
+  key_name = "sydney"
 }
